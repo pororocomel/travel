@@ -1,13 +1,13 @@
-{{ define "main" }}
+{{ define "content" }}
 <!-- Header Start -->
 <div class="container-fluid page-header">
     <div class="container">
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
-            <h3 class="display-4 text-white text-uppercase">Services</h3>
+            <h3 class="display-4 text-white text-uppercase">Activities</h3>
             <div class="d-inline-flex text-white">
                 <p class="m-0 text-uppercase"><a class="text-white" href="{{ "/" | relURL }}">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
-                <p class="m-0 text-uppercase">Services</p>
+                <p class="m-0 text-uppercase">Activities</p>
             </div>
         </div>
     </div>
@@ -50,8 +50,8 @@
                                 <select class="custom-select px-4" style="height: 47px;">
                                     <option selected>Duration</option>
                                     <option value="1">1 Day</option>
-                                    <option value="2">3 Days</option>
-                                    <option value="3">1 Week</option>
+                                    <option value="2">2 Days</option>
+                                    <option value="3">3 Days</option>
                                 </select>
                             </div>
                         </div>
@@ -74,16 +74,14 @@
             <h1>Tours & Travel Services</h1>
         </div>
         <div class="row">
-            {{ with .Params.services }}
-            {{ range . }}
+            {{ range seq 1 6 }}
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                    <i class="{{ .icon }} fa-2x mx-auto mb-4"></i>
-                    <h5 class="mb-2">{{ .title }}</h5>
-                    <p class="m-0">{{ .description }}</p>
+                    <i class="fa fa-2x fa-route mx-auto mb-4"></i>
+                    <h5 class="mb-2">Service {{ . }}</h5>
+                    <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
                 </div>
             </div>
-            {{ end }}
             {{ end }}
         </div>
     </div>
@@ -98,17 +96,15 @@
             <h1>What Say Our Clients</h1>
         </div>
         <div class="owl-carousel testimonial-carousel">
-            {{ with .Params.testimonials }}
-            {{ range . }}
+            {{ range seq 1 4 }}
             <div class="text-center pb-4">
-                <img class="img-fluid mx-auto" src="{{ .image }}" style="width: 100px; height: 100px;">
+                <img class="img-fluid mx-auto" src="/img/testimonial-{{ . }}.jpg" style="width: 100px; height: 100px;">
                 <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">{{ .feedback }}</p>
-                    <h5 class="text-truncate">{{ .name }}</h5>
-                    <span>{{ .profession }}</span>
+                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
+                    <h5 class="text-truncate">Client {{ . }}</h5>
+                    <span>Profession</span>
                 </div>
             </div>
-            {{ end }}
             {{ end }}
         </div>
     </div>
