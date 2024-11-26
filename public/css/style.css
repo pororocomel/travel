@@ -52,6 +52,11 @@ html {
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
+.p-4:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
 
 body {
   margin: 0;
