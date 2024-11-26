@@ -13,36 +13,116 @@
     </div>
 </div>
 
-<!-- Packages Section -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Packages</h6>
-            <h1>Accommodations</h1>
+<!-- Accommodation Section Start -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold text-primary" style="letter-spacing: 3px;">Accommodations</h6>
+            <h1 class="display-5 fw-bold">Find Your Perfect Stay</h1>
+            <p class="text-muted fs-4">Explore a variety of accommodations, from luxury resorts to nature-friendly homestays.</p>
         </div>
-        <div class="row">
-            {{ range seq 1 6 }}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="package-item bg-white mb-2">
-                    <img class="img-fluid" src="/img/package-{{ . }}.jpg" alt="">
-                    <div class="p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <small><i class="fa fa-map-marker-alt text-primary mr-2"></i>Thailand</small>
-                            <small><i class="fa fa-calendar-alt text-primary mr-2"></i>3 days</small>
-                            <small><i class="fa fa-user text-primary mr-2"></i>2 Person</small>
-                        </div>
-                        <a class="h5 text-decoration-none" href="#">Discover amazing places</a>
-                        <div class="border-top mt-4 pt-4">
-                            <div class="d-flex justify-content-between">
-                                <h6><i class="fa fa-star text-primary mr-2"></i>4.5 <small>(250)</small></h6>
-                                <h5>$350</h5>
-                            </div>
+
+        <!-- Accommodation Grid -->
+        <div class="row g-4">
+            <!-- Royal Belum Resort -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="/img/resort.jpeg" alt="Royal Belum Resort" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Royal Belum Resort</h5>
+                        <p class="card-text text-muted">
+                            A luxury resort offering stunning lake views and premium amenities for a relaxing getaway.
+                        </p>
+                        <div class="border-top mt-3 pt-3">
+                            <h6 class="text-muted">Room prices start from <strong>RM200 per night</strong></h6>
+                            <a href="https://www.agoda.com/pages/agoda/default/DestinationSearchResult.aspx?selectedproperty=248256&city=208245&hid=248256&site_id=1915003&tag=b33c470a-a6e3-4b1a-ae03-4ea52f0dd5bd&msclkid=3e135e0464fd1d5496b839403698fa75&ds=NSvwqQV74Yc4gYfE" class="btn btn-outline-primary mt-2">Book Now</a>
                         </div>
                     </div>
                 </div>
             </div>
-            {{ end }}
+
+            <!-- Temengor Homestay -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="/img/homestay.jpg" alt="Temengor Homestay" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Kampung House</h5>
+                        <p class="card-text text-muted">
+                            Simple and cozy accommodations offering an immersive nature experience.
+                        </p>
+                        <div class="border-top mt-3 pt-3">
+                            <h6 class="text-muted">Room prices start from <strong>RM150 per night</strong></h6>
+                            <a href="https://www.belumrainforestresort.com/meranti" class="btn btn-outline-primary mt-2">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Houseboat -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="/img/houseboat.jpeg" alt="Houseboat" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Houseboat</h5>
+                        <p class="card-text text-muted">
+                            A unique experience staying on a houseboat, perfect for relaxing on the serene lake.
+                        </p>
+                        <div class="border-top mt-3 pt-3">
+                            <h6 class="text-muted">Room prices start from <strong>RM250 per night</strong></h6>
+                            <a href="https://www.belumrainforestresort.com/houseboat" class="btn btn-outline-primary mt-2">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Plan Your Stay Section -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container py-5">
+        <!-- Section Title -->
+        <div class="text-center mb-5">
+            <h4 class="fw-bold text-primary text-uppercase" style="letter-spacing: 3px;">Plan Your Stay</h4>
+            <p class="text-muted fs-5">Discover nearby activities and delightful dining options to make your visit unforgettable.</p>
+        </div>
+
+        <!-- Action Cards -->
+        <div class="row g-4">
+            <!-- Explore Activities Card -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100 text-center">
+                    <div class="position-relative">
+                        <img src="/img/activities.png" alt="Explore Activities" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <div class="position-absolute bottom-0 start-0 bg-primary text-white px-3 py-2 rounded-top-end opacity-75">Activities</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold text-primary">Explore Nearby Activities</h5>
+                        <p class="text-muted">Discover exciting adventures and attractions just around the corner.</p>
+                        <a href="/activities" class="btn btn-primary fw-bold px-4 py-2">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Local Restaurants Card -->
+            <div class="col-md-6">
+                <div class="card border-0 shadow-lg h-100 text-center">
+                    <div class="position-relative">
+                        <img src="/img/restaurant.png" alt="Find Restaurants" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <div class="position-absolute bottom-0 start-0 bg-primary text-white px-3 py-2 rounded-top-end opacity-75">Restaurants</div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="fw-bold text-primary">Find Local Restaurants</h5>
+                        <p class="text-muted">Savor the taste of local delicacies and cuisines during your stay.</p>
+                        <a href="/food" class="btn btn-primary fw-bold px-4 py-2">Find Restaurants</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+    </div>
+</div>
+<!-- Accommodation Section End -->
+
 {{ end }}

@@ -14,100 +14,119 @@
 </div>
 <!-- Header End -->
 
-<!-- Booking Start -->
-<div class="container-fluid booking mt-5 pb-5">
-    <div class="container pb-5">
-        <div class="bg-light shadow" style="padding: 30px;">
-            <div class="row align-items-center" style="min-height: 60px;">
-                <div class="col-md-10">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Destination</option>
-                                    <option value="1">Destination 1</option>
-                                    <option value="2">Destination 2</option>
-                                    <option value="3">Destination 3</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <div class="date" id="date1" data-target-input="nearest">
-                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Depart Date" data-target="#date1" data-toggle="datetimepicker" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <div class="date" id="date2" data-target-input="nearest">
-                                    <input type="text" class="form-control p-4 datetimepicker-input" placeholder="Return Date" data-target="#date2" data-toggle="datetimepicker" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3 mb-md-0">
-                                <select class="custom-select px-4" style="height: 47px;">
-                                    <option selected>Duration</option>
-                                    <option value="1">1 Day</option>
-                                    <option value="2">2 Days</option>
-                                    <option value="3">3 Days</option>
-                                </select>
-                            </div>
+
+
+<!-- Activities and Events Section Start -->
+<div class="container-fluid py-5 bg-light">
+    <div class="container py-5">
+        <!-- Section Header -->
+        <div class="text-center mb-5">
+            <h6 class="text-uppercase fw-bold text-primary" style="letter-spacing: 3px;">Activities & Events</h6>
+            <h1 class="display-5 fw-bold">Explore Exciting Activities and Events</h1>
+            <p class="text-muted fs-4">Discover unforgettable experiences and annual highlights in Royal Belum.</p>
+        </div>
+
+        <!-- Activities Grid -->
+        <div class="row g-4">
+            <!-- Trekking & Hiking -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <div class="position-relative">
+                        <img src="/img/trekking.jpeg" alt="Trekking & Hiking" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <div class="position-absolute top-0 start-0 bg-success text-white px-3 py-1 rounded-bottom-end" style="font-size: 0.9rem;">Outdoor Adventure</div>
+                    </div>
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Trekking & Hiking</h5>
+                        <p class="card-text text-muted">
+                            Explore the beauty of nature through scenic forest trails in Royal Belum.
+                        </p>
+                        <a href="/activities/trekking" class="btn btn-outline-primary">Book a Trekking Tour</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boating on Temengor Lake -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="/img/boating.jpeg" alt="Boating on Temengor Lake" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Boating on Temengor Lake</h5>
+                        <p class="card-text text-muted">
+                            Relax and unwind with a boat ride on Temengor Lake, surrounded by stunning views.
+                        </p>
+                        <a href="/activities/boating" class="btn btn-outline-primary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Camping and Fishing -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card border-0 shadow-lg h-100">
+                    <img src="/img/camping.jpeg" alt="Camping and Fishing" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                    <div class="card-body text-center">
+                        <h5 class="card-title fw-bold text-primary">Camping & Fishing</h5>
+                        <p class="card-text text-muted">
+                            Experience the outdoors with camping and fishing in the serene Royal Belum setting.
+                        </p>
+                        <a href="/activities/camping" class="btn btn-outline-primary">Plan Your Trip</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="mt-5">
+            <div class="text-center mb-4">
+                <h4 class="fw-bold text-primary">Calendar of Events</h4>
+                <p class="text-muted fs-5">Don’t miss these exciting annual events!</p>
+            </div>
+            <div class="row g-4">
+                <!-- Royal Belum Forest Festival -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <img src="/img/bird.png" alt="Royal Belum Forest Festival" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Bird Watching</h5>
+                            <p class="card-text text-muted">
+                                Held every August, this festival celebrates the beauty and culture of Royal Belum.
+                            </p>
+                            <a href="https://belum.com.my/birdwatching/" class="btn btn-outline-primary">Read More</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
-                    <button class="btn btn-primary btn-block" type="submit" style="height: 47px; margin-top: -2px;">Submit</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Booking End -->
 
-<!-- Service Start -->
-<div class="container-fluid py-5">
-    <div class="container pt-5 pb-3">
-        <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Services</h6>
-            <h1>Tours & Travel Services</h1>
-        </div>
-        <div class="row">
-            {{ range seq 1 6 }}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="service-item bg-white text-center mb-2 py-5 px-4">
-                    <i class="fa fa-2x fa-route mx-auto mb-4"></i>
-                    <h5 class="mb-2">Service {{ . }}</h5>
-                    <p class="m-0">Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem est amet labore</p>
+                <!-- Temengor Lake Fishing Competition -->
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-lg h-100">
+                        <img src="/img/fishing.png" alt="Fishing Competition" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <div class="card-body text-center">
+                            <h5 class="card-title fw-bold text-primary">Temengor Lake Fishing Competition</h5>
+                            <p class="card-text text-muted">
+                                An annual event for fishing enthusiasts, held amidst the serene beauty of Temengor Lake.
+                            </p>
+                            <a href="https://belum.com.my/fishing/" class="btn btn-outline-primary">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {{ end }}
         </div>
-    </div>
-</div>
-<!-- Service End -->
 
-<!-- Testimonial Start -->
-<div class="container-fluid py-5">
-    <div class="container py-5">
-        <div class="text-center mb-3 pb-3">
-            <h6 class="text-primary text-uppercase" style="letter-spacing: 5px;">Testimonial</h6>
-            <h1>What Say Our Clients</h1>
-        </div>
-        <div class="owl-carousel testimonial-carousel">
-            {{ range seq 1 4 }}
-            <div class="text-center pb-4">
-                <img class="img-fluid mx-auto" src="/img/testimonial-{{ . }}.jpg" style="width: 100px; height: 100px;">
-                <div class="testimonial-text bg-white p-4 mt-n5">
-                    <p class="mt-5">Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
-                    <h5 class="text-truncate">Client {{ . }}</h5>
-                    <span>Profession</span>
+        <!-- Additional Information -->
+        <div class="mt-5">
+            <h4 class="fw-bold text-center mb-4">Plan Your Adventure</h4>
+            <div class="row g-4 text-center">
+                <div class="col-md-6">
+                    <a href="/accommodation" class="btn btn-outline-secondary btn-lg fw-bold">Nearby Accommodations</a>
+                </div>
+                <div class="col-md-6">
+                    <a href="/restaurants" class="btn btn-outline-secondary btn-lg fw-bold">Local Restaurants</a>
                 </div>
             </div>
-            {{ end }}
         </div>
     </div>
 </div>
-<!-- Testimonial End -->
+<!-- Activities and Events Section End -->
+
+
+
 {{ end }}
