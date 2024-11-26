@@ -1,6 +1,6 @@
 baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'All About Travel'
+title = 'Explore Royal Belum'
 
 [markup]
   [markup.goldmark]
