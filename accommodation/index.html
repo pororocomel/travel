@@ -26,7 +26,7 @@
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="/" class="navbar-brand">
+            <a href="/travel" class="navbar-brand">
                 <h1 class="m-0 text-primary"><span class="text-dark">ROYAL</span>BELUM</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -34,20 +34,20 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="/" class="nav-item nav-link ">Home</a>
-                    <a href="/travel/attractions" class="nav-item nav-link ">Attractions</a>
-                    <a href="/travel/activities" class="nav-item nav-link ">Activities</a>
-                    <a href="/travel/accommodation" class="nav-item nav-link ">Accommodations</a>
+                    <a href="/travel" class="nav-item nav-link {{ if eq .RelPermalink "/travel/" }}active{{ end }}">Home</a>
+                    <a href="/travel/attractions" class="nav-item nav-link {{ if eq .RelPermalink "/travel/attractions/" }}active{{ end }}">Attractions</a>
+                    <a href="/travel/activities" class="nav-item nav-link {{ if eq .RelPermalink "/travel/activities/" }}active{{ end }}">Activities</a>
+                    <a href="/travel/accommodation" class="nav-item nav-link {{ if eq .RelPermalink "/travel/accommodation/" }}active{{ end }}">Accommodations</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Others</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ if or (eq .RelPermalink "/travel/food/") (eq .RelPermalink "/travel/historical/") (eq .RelPermalink "/travel/maps/") (eq .RelPermalink "/travel/review/") }}active{{ end }}" data-toggle="dropdown">Others</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
-                            <a href="/travel/food" class="dropdown-item ">Foodie</a>
-                            <a href="/travel/historical" class="dropdown-item ">Historical</a>
-                            <a href="/travel/maps" class="dropdown-item ">Locations</a>
-                            <a href="/travel/review" class="dropdown-item ">Testimonial</a>
+                            <a href="/travel/food" class="dropdown-item {{ if eq .RelPermalink "/travel/food/" }}active{{ end }}">Foodie</a>
+                            <a href="/travel/historical" class="dropdown-item {{ if eq .RelPermalink "/travel/historical/" }}active{{ end }}">Historical</a>
+                            <a href="/travel/maps" class="dropdown-item {{ if eq .RelPermalink "/travel/maps/" }}active{{ end }}">Locations</a>
+                            <a href="/travel/review" class="dropdown-item {{ if eq .RelPermalink "/travel/review/" }}active{{ end }}">Testimonial</a>
                         </div>
                     </div>
-                </div>                              
+                </div>                                         
             </div>
         </nav>
     </div>
@@ -65,7 +65,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
             <h3 class="display-4 text-white text-uppercase">Accommodations</h3>
             <div class="d-inline-flex text-white">
-                <p class="m-0 text-uppercase"><a class="text-white" href="/">Home</a></p>
+                <p class="m-0 text-uppercase"><a class="text-white" href="/travel">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
                 <p class="m-0 text-uppercase">Accommodations</p>
             </div>
@@ -88,7 +88,7 @@
         
         <div class="col-lg-3 col-md-6">
             <div class="card border-0 shadow-lg h-100">
-                <img src="/img/resort.jpeg" alt="Royal Belum Resort" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
+                <img src="/travel/img/resort.jpeg" alt="Royal Belum Resort" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body text-center">
                     <h5 class="card-title fw-bold text-primary">Royal Belum Resort</h5>
                     <p class="card-text text-muted">A luxury resort offering stunning lake views and premium amenities for a relaxing getaway.</p>
@@ -103,7 +103,7 @@
         
         <div class="col-lg-3 col-md-6">
             <div class="card border-0 shadow-lg h-100">
-                <img src="/img/vila.jpg" alt="Villa Tanjung Wan" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
+                <img src="/travel/img/vila.jpg" alt="Villa Tanjung Wan" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body text-center">
                     <h5 class="card-title fw-bold text-primary">Villa Tanjung Wan</h5>
                     <p class="card-text text-muted">Experience the ultimate luxury stay amidst breathtaking views of Royal Belum's lush rainforest.</p>
@@ -118,7 +118,7 @@
         
         <div class="col-lg-3 col-md-6">
             <div class="card border-0 shadow-lg h-100">
-                <img src="/img/homestay.jpg" alt="Kampung House" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
+                <img src="/travel/img/homestay.jpg" alt="Kampung House" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body text-center">
                     <h5 class="card-title fw-bold text-primary">Kampung House</h5>
                     <p class="card-text text-muted">Simple and cozy accommodations offering an immersive nature experience.</p>
@@ -133,7 +133,7 @@
         
         <div class="col-lg-3 col-md-6">
             <div class="card border-0 shadow-lg h-100">
-                <img src="/img/houseboat.jpeg" alt="Houseboat" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
+                <img src="/travel/img/houseboat.jpeg" alt="Houseboat" class="card-img-top rounded-top" style="height: 200px; object-fit: cover;">
                 <div class="card-body text-center">
                     <h5 class="card-title fw-bold text-primary">Houseboat</h5>
                     <p class="card-text text-muted">A unique experience staying on a houseboat, perfect for relaxing on the serene lake.</p>
@@ -163,13 +163,13 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow-lg h-100 text-center">
                     <div class="position-relative">
-                        <img src="/img/activities.png" alt="Explore Activities" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/activities.png" alt="Explore Activities" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         <div class="position-absolute bottom-0 start-0 bg-primary text-white px-3 py-2 rounded-top-end opacity-75">Activities</div>
                     </div>
                     <div class="card-body">
                         <h5 class="fw-bold text-primary">Explore Nearby Activities</h5>
                         <p class="text-muted">Discover exciting adventures and attractions just around the corner.</p>
-                        <a href="/activities" class="btn btn-primary fw-bold px-4 py-2">Learn More</a>
+                        <a href="/travel/activities" class="btn btn-primary fw-bold px-4 py-2">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -178,13 +178,13 @@
             <div class="col-md-6">
                 <div class="card border-0 shadow-lg h-100 text-center">
                     <div class="position-relative">
-                        <img src="/img/restaurant.png" alt="Find Restaurants" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/restaurant.png" alt="Find Restaurants" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         <div class="position-absolute bottom-0 start-0 bg-primary text-white px-3 py-2 rounded-top-end opacity-75">Restaurants</div>
                     </div>
                     <div class="card-body">
                         <h5 class="fw-bold text-primary">Find Local Restaurants</h5>
                         <p class="text-muted">Savor the taste of local delicacies and cuisines during your stay.</p>
-                        <a href="/food" class="btn btn-primary fw-bold px-4 py-2">Find Restaurants</a>
+                        <a href="/travel/food" class="btn btn-primary fw-bold px-4 py-2">Find Restaurants</a>
                     </div>
                 </div>
             </div>
