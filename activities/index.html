@@ -26,7 +26,7 @@
 <div class="container-fluid position-relative nav-bar p-0">
     <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
         <nav class="navbar navbar-expand-lg bg-light navbar-light shadow-lg py-3 py-lg-0 pl-3 pl-lg-5">
-            <a href="/" class="navbar-brand">
+            <a href="/travel" class="navbar-brand">
                 <h1 class="m-0 text-primary"><span class="text-dark">ROYAL</span>BELUM</h1>
             </a>
             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -34,20 +34,20 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="/" class="nav-item nav-link ">Home</a>
-                    <a href="/travel/attractions" class="nav-item nav-link ">Attractions</a>
-                    <a href="/travel/activities" class="nav-item nav-link ">Activities</a>
-                    <a href="/travel/accommodation" class="nav-item nav-link ">Accommodations</a>
+                    <a href="/travel" class="nav-item nav-link {{ if eq .RelPermalink "/travel/" }}active{{ end }}">Home</a>
+                    <a href="/travel/attractions" class="nav-item nav-link {{ if eq .RelPermalink "/travel/attractions/" }}active{{ end }}">Attractions</a>
+                    <a href="/travel/activities" class="nav-item nav-link {{ if eq .RelPermalink "/travel/activities/" }}active{{ end }}">Activities</a>
+                    <a href="/travel/accommodation" class="nav-item nav-link {{ if eq .RelPermalink "/travel/accommodation/" }}active{{ end }}">Accommodations</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Others</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ if or (eq .RelPermalink "/travel/food/") (eq .RelPermalink "/travel/historical/") (eq .RelPermalink "/travel/maps/") (eq .RelPermalink "/travel/review/") }}active{{ end }}" data-toggle="dropdown">Others</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
-                            <a href="/travel/food" class="dropdown-item ">Foodie</a>
-                            <a href="/travel/historical" class="dropdown-item ">Historical</a>
-                            <a href="/travel/maps" class="dropdown-item ">Locations</a>
-                            <a href="/travel/review" class="dropdown-item ">Testimonial</a>
+                            <a href="/travel/food" class="dropdown-item {{ if eq .RelPermalink "/travel/food/" }}active{{ end }}">Foodie</a>
+                            <a href="/travel/historical" class="dropdown-item {{ if eq .RelPermalink "/travel/historical/" }}active{{ end }}">Historical</a>
+                            <a href="/travel/maps" class="dropdown-item {{ if eq .RelPermalink "/travel/maps/" }}active{{ end }}">Locations</a>
+                            <a href="/travel/review" class="dropdown-item {{ if eq .RelPermalink "/travel/review/" }}active{{ end }}">Testimonial</a>
                         </div>
                     </div>
-                </div>                              
+                </div>                                         
             </div>
         </nav>
     </div>
@@ -65,7 +65,7 @@
         <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 400px">
             <h3 class="display-4 text-white text-uppercase">Activities</h3>
             <div class="d-inline-flex text-white">
-                <p class="m-0 text-uppercase"><a class="text-white" href="/">Home</a></p>
+                <p class="m-0 text-uppercase"><a class="text-white" href="/travel">Home</a></p>
                 <i class="fa fa-angle-double-right pt-1 px-3"></i>
                 <p class="m-0 text-uppercase">Activities</p>
             </div>
@@ -166,13 +166,13 @@
             <div class="swiper-slide">
                 <div class="card border-0 shadow h-100 rounded">
                     <div class="position-relative">
-                        <img src="/img/trekking.jpeg" alt="Trekking & Hiking" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/trekking.jpeg" alt="Trekking & Hiking" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         
                     </div>
                     <div class="card-body text-center">
                         <h5 class="card-title fw-bold text-primary">Trekking & Hiking</h5>
                         <p class="card-text text-muted">Explore the beauty of nature through scenic forest trails in Royal Belum.</p>
-                        <a href="/activities/trekking" class="btn btn-outline-primary btn-sm fw-bold">Book a Trekking Tour</a>
+                        <a href="/travel/activities/trekking" class="btn btn-outline-primary btn-sm fw-bold">Book a Trekking Tour</a>
                     </div>
                 </div>
             </div>
@@ -181,7 +181,7 @@
             <div class="swiper-slide">
                 <div class="card border-0 shadow h-100 rounded">
                     <div class="position-relative">
-                        <img src="/img/boating.jpeg" alt="Boating on Temengor Lake" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/boating.jpeg" alt="Boating on Temengor Lake" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         
                     </div>
                     <div class="card-body text-center">
@@ -196,7 +196,7 @@
             <div class="swiper-slide">
                 <div class="card border-0 shadow h-100 rounded">
                     <div class="position-relative">
-                        <img src="/img/camping.jpeg" alt="Camping and Fishing" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/camping.jpeg" alt="Camping and Fishing" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         
                     </div>
                     <div class="card-body text-center">
@@ -211,7 +211,7 @@
             <div class="swiper-slide">
                 <div class="card border-0 shadow h-100 rounded">
                     <div class="position-relative">
-                        <img src="/img/kayak.jpg" alt="Kayak Tours and Rentals" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/kayak.jpg" alt="Kayak Tours and Rentals" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         
                     </div>
                     <div class="card-body text-center">
@@ -248,7 +248,7 @@
                 
                 <div class="col-md-6">
                     <div class="card border-0 shadow-lg h-100">
-                        <img src="/img/bird.png" alt="Royal Belum Forest Festival" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/bird.png" alt="Royal Belum Forest Festival" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         <div class="card-body text-center">
                             <h5 class="card-title fw-bold text-primary">Bird Watching</h5>
                             <p class="card-text text-muted">
@@ -262,7 +262,7 @@
                 
                 <div class="col-md-6">
                     <div class="card border-0 shadow-lg h-100">
-                        <img src="/img/fishing.png" alt="Fishing Competition" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
+                        <img src="/travel/img/fishing.png" alt="Fishing Competition" class="card-img-top rounded-top" style="height: 250px; object-fit: cover;">
                         <div class="card-body text-center">
                             <h5 class="card-title fw-bold text-primary">Temengor Lake Fishing Competition</h5>
                             <p class="card-text text-muted">
@@ -288,7 +288,7 @@
                 <i class="fa fa-bed fa-3x text-primary mb-3"></i>
                 <h5 class="fw-bold text-primary">Nearby Accommodations</h5>
                 <p class="text-muted">Explore cozy lodges and luxurious resorts for a comfortable stay.</p>
-                <a href="/accommodation" class="btn btn-primary fw-bold mt-2">Explore Options</a>
+                <a href="/travel/accommodation" class="btn btn-primary fw-bold mt-2">Explore Options</a>
             </div>
         </div>
         
@@ -297,7 +297,7 @@
                 <i class="fa fa-utensils fa-3x text-primary mb-3"></i>
                 <h5 class="fw-bold text-primary">Local Restaurants</h5>
                 <p class="text-muted">Enjoy the taste of authentic local cuisine near Royal Belum.</p>
-                <a href="/food" class="btn btn-primary fw-bold mt-2">Discover Restaurants</a>
+                <a href="/travel/food" class="btn btn-primary fw-bold mt-2">Discover Restaurants</a>
             </div>
         </div>
     </div>
