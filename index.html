@@ -35,20 +35,20 @@
             </button>
             <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
                 <div class="navbar-nav ml-auto py-0">
-                    <a href="/" class="nav-item nav-link ">Home</a>
-                    <a href="/travel/attractions" class="nav-item nav-link ">Attractions</a>
-                    <a href="/travel/activities" class="nav-item nav-link ">Activities</a>
-                    <a href="/travel/accommodation" class="nav-item nav-link ">Accommodations</a>
+                    <a href="/travel" class="nav-item nav-link {{ if eq .RelPermalink "/travel/" }}active{{ end }}">Home</a>
+                    <a href="/travel/attractions" class="nav-item nav-link {{ if eq .RelPermalink "/travel/attractions/" }}active{{ end }}">Attractions</a>
+                    <a href="/travel/activities" class="nav-item nav-link {{ if eq .RelPermalink "/travel/activities/" }}active{{ end }}">Activities</a>
+                    <a href="/travel/accommodation" class="nav-item nav-link {{ if eq .RelPermalink "/travel/accommodation/" }}active{{ end }}">Accommodations</a>
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle " data-toggle="dropdown">Others</a>
+                        <a href="#" class="nav-link dropdown-toggle {{ if or (eq .RelPermalink "/travel/food/") (eq .RelPermalink "/travel/historical/") (eq .RelPermalink "/travel/maps/") (eq .RelPermalink "/travel/review/") }}active{{ end }}" data-toggle="dropdown">Others</a>
                         <div class="dropdown-menu border-0 rounded-0 m-0">
-                            <a href="/travel/food" class="dropdown-item ">Foodie</a>
-                            <a href="/travel/historical" class="dropdown-item ">Historical</a>
-                            <a href="/travel/maps" class="dropdown-item ">Locations</a>
-                            <a href="/travel/review" class="dropdown-item ">Testimonial</a>
+                            <a href="/travel/food" class="dropdown-item {{ if eq .RelPermalink "/travel/food/" }}active{{ end }}">Foodie</a>
+                            <a href="/travel/historical" class="dropdown-item {{ if eq .RelPermalink "/travel/historical/" }}active{{ end }}">Historical</a>
+                            <a href="/travel/maps" class="dropdown-item {{ if eq .RelPermalink "/travel/maps/" }}active{{ end }}">Locations</a>
+                            <a href="/travel/review" class="dropdown-item {{ if eq .RelPermalink "/travel/review/" }}active{{ end }}">Testimonial</a>
                         </div>
                     </div>
-                </div>                              
+                </div>                                            
             </div>
         </nav>
     </div>
