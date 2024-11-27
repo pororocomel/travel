@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://pororocomel.github.io/travel/'
 languageCode = 'en-us'
 title = 'Explore Royal Belum'
 
@@ -7,4 +7,5 @@ title = 'Explore Royal Belum'
     [markup.goldmark.renderer]
       unsafe = true
 
-[taxonomies]
+relativeURLs = true
+
